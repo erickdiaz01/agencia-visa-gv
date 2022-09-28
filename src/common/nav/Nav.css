@@ -17,16 +17,16 @@
   border-radius: 15px;
   color: black;
 }
-.nav-item:hover{
-  transition: background-color .5s;
-   background-color: rgb(146, 172, 255);
-  
-   border-radius: 10px;
-   justify-content: center;
-   align-items: center;
-   padding: 10% auto ;
+.nav-item:hover {
+  transition: background-color 0.5s;
+  background-color: #a8dadc;
 
-   font-size: large;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 10% auto;
+  font-weight: bolder;
+  font-size: large;
 }
 .nav-item-btn {
   margin: 5%;
@@ -38,7 +38,6 @@
   flex: 1 1 auto;
 }
 .name-company {
-
   padding: 2%;
   margin: auto 5%;
   display: flex;

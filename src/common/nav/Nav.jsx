@@ -3,42 +3,20 @@ import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import UsaSvg from "../../assets/images/Flag_of_the_United_States.svg";
-import ColSvg from "../../assets/images/Flag_of_Colombia.svg";
-import Logo from "../../assets/images/visa-americana-colombia-estados-unidos.jpg";
-import ChinaIcon from "../../assets/icons/china.png"
-import UsaIcon from "../../assets/icons/estados-unidos.png"
-import CanadaIcon from "../../assets/icons/canada.png"
+import ChinaIcon from "../../assets/icons/china.png";
+import UsaIcon from "../../assets/icons/estados-unidos.png";
+import CanadaIcon from "../../assets/icons/canada.png";
 import "./Nav.css";
 import { Fragment } from "react";
 import { Button } from "react-bootstrap";
-import{BsWhatsapp} from 'react-icons/bs'
+import { BsWhatsapp } from "react-icons/bs";
 export const NavComponent = () => {
   return (
     <Fragment>
-      {/* <div className="nav-container">
-        <div className="name-logo-company">
-          <h3>EASY VISA</h3>
-        </div>
-        <div className="container-nav-items">
-          <ul>
-            <li>Sobre nosotros</li>
-            <li>Visas</li>
-            <li>Contactenos</li>
-            <li>Casos de exito</li>
-            <li>Herramientas</li>
-          </ul>
-        </div>
-        <div className="contact-button">
-          <Button variant="success">Success</Button>
-        </div>
-      </div> */}
       <Navbar expand="xl" className="nav-container">
         <Container fluid>
-          <Navbar.Brand href="#" className="name-company">
-            <div className="wrap-name">
-            EASY VISA
-            </div>
+          <Navbar.Brand href="/home" className="name-company">
+            <div className="wrap-name">EASY VISA</div>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="offcanvasNavbar-expand-xl" />
           <Navbar.Offcanvas
@@ -56,10 +34,10 @@ export const NavComponent = () => {
                 className="justify-content-start flex-grow-1"
                 id="items-navbar"
               >
-                <Nav.Link className="nav-item" href="#action1">
+                <Nav.Link className="nav-item fw-bold" href="/home">
                   Home
                 </Nav.Link>
-                <Nav.Link className="nav-item" href="#action2">
+                <Nav.Link className="nav-item fw-bold" href="#action2">
                   Sobre nosotros
                 </Nav.Link>
                 <NavDropdown
@@ -67,25 +45,25 @@ export const NavComponent = () => {
                   id="offcanvasNavbarDropdown-expand-xl"
                 >
                   <NavDropdown.Item href="#action3">
-                  <img src={UsaIcon} width="15%" alt="UsaIcon"/> Americana</NavDropdown.Item>
-                  <NavDropdown.Item href="#action4">
-                  <img src={CanadaIcon} width="15%" alt="CanadaIcon"/> Canadiense
+                    <img src={UsaIcon} width="15%" alt="UsaIcon" /> Americana
                   </NavDropdown.Item>
                   <NavDropdown.Item href="#action4">
-                  <img src={ChinaIcon} width="15%" alt="ChinaIcon"/> China 
+                    <img src={CanadaIcon} width="15%" alt="CanadaIcon" />{" "}
+                    Canadiense
                   </NavDropdown.Item>
-                  <NavDropdown.Divider/>
+                  <NavDropdown.Item href="#action4">
+                    <img src={ChinaIcon} width="15%" alt="ChinaIcon" /> China
+                  </NavDropdown.Item>
+                  <NavDropdown.Divider />
                   <NavDropdown.Item href="#action5">
-                    Something else here
+                    Otras visas
                   </NavDropdown.Item>
-                 
                 </NavDropdown>
                 <span className="fill-remaining-space"> </span>
-              
               </Nav>
-              <Button variant="outline-success" className="nav-item-btn" >
-                  <BsWhatsapp/> Contactenos
-                </Button>
+              <Button variant="outline-success" className="nav-item-btn">
+                <BsWhatsapp /> <strong>CONTACTENOS</strong>
+              </Button>
             </Offcanvas.Body>
           </Navbar.Offcanvas>
         </Container>
